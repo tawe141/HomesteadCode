@@ -45,6 +45,7 @@
                 <a class="btn btn-danger" href="{{ URL::to('/deleteinfo/' . $datum->id . '/confirm')}}">Delete</a>
             </div>
         @endforeach
+        @if(Auth::check())
         <div class="col-md-3 center grayed" style="outline: #DDDDDD dotted thick" data-toggle="modal" data-target="#newStore">
             <i class="glyphicon glyphicon-plus center-block" style="font-size: 5em"></i>
             <h3 class="text-center">Click to add a new entry.</h3>
@@ -100,5 +101,6 @@
                 </div>
             </div>
         </div>
+        @endif
     </div>
 @stop
