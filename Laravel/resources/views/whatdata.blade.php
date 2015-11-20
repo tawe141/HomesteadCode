@@ -57,7 +57,45 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4>Data Store</h4>
+                        <h3>Data Store</h3>
+                    </div>
+                    <div class="modal-body" style="padding: 40px 50px;">
+                        {!! Form::open(array('class' => 'form-horizontal', 'role' => 'form', 'url' => 'postinfo')) !!}
+                        <div class="form-group">
+                            {!! Form::label('name', 'Name: ', array('class' => 'control-group')) !!}
+                            <div>
+                                {!! Form::text('name', null, ['class' => 'form-control']) !!}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {!! Form::label('idnum', 'ID Number: ', array('class' => 'control-group')) !!}
+                            <div>
+                                {!! Form::text('idnum', null, ['class' => 'form-control']) !!}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {!! Form::label('jobtitle', 'Job Title: ', array('class' => 'control-group')) !!}
+                            <div>
+                                {!! Form::text('jobtitle', null, ['class' => 'form-control']) !!}
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            {!! Form::label('tags', 'Tags: ', array('class' => 'control-group')) !!}
+                            <div>
+                                {!! Form::select('tags[]', $tags, $dataTags, ['id' => 'tagSelectBox', 'class' => 'form-control', 'multiple']) !!}
+                            </div>
+                            {!! Form::label('inputtags', 'Input Tags:', array('class' => 'control-group', 'style' => 'padding-top: 1em;')) !!}
+                            <div>
+                                <p>Type in tags here. Tags not found in the database will be added automatically. Separate using spaces.</p>
+                                {!! Form::text('inputtags', null, array('class' => 'form-control')) !!}
+                            </div>
+                        </div>
+                        <div>
+                            {!! Form::checkbox('clickme') !!}
+                            {!! Form::label('clickmelabel', 'CLICK MEEEE!!') !!}
+                            {!! Form::submit() !!}
+                        </div>
+
                     </div>
                 </div>
             </div>
