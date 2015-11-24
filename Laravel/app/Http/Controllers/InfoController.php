@@ -165,7 +165,8 @@ class InfoController extends Controller
         }
         else {
             $data = Data::all();
-            return view('whatdata')->with('data', $data);
+            $tags = Tags::lists('name', 'id')->toArray();
+            return view('whatdata', ['data' => $data, 'tags' => $tags, 'dataTags' => null]);
         }
     }
     public function whatdata_author($name) {
