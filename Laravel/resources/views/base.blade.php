@@ -26,9 +26,9 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav">
-                @if(Auth::check())
+                <!-- @if(Auth::check())
                 <li><a href="{{ URL::to('/store') }}">Store</a></li>
-                @endif
+                @endif -->
                 <li><a href="{{ URL::to('/whatdata/') }}">whatData</a></li>
                 @if(Auth::check())
                 <li><a href="{{ URL::to('/auth/logout') }}">Logout</a></li>
